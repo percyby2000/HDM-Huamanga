@@ -24,7 +24,7 @@ const eventosProximos: Evento[] = [
     fecha: "31 de octubre, 1 y 2 de noviembre 2025",
     lugar: "Molino viejo - Huatatas",
     categoria: "campamento",
-    img: "/public/img/larecistencia.mp4",
+    img: "/img/larecistencia.mp4",
     presencial: true,
     descripcion:
       "🚨 ¡Atención Hijos y Nietos de Pastores de la Región Ayacucho! ¡El campamento que estabas esperando ya llegó! 🔥 🗓️ 31 de octubre, 1 y 2 de noviembre – tres días que marcarán tu vida. ✨ ¿Por qué no puedes perdértelo? ⭕️ Actividades épicas para jóvenes desde los 10 años en adelante. 💥 ⭕️ Conexión auténtica con otros hijos y nietos de pastores. 🌍 ⭕️ Descubrirás que eres parte de una gran familia de llamados al ministerio. 🙌 ⭕️ Recibirás un impulso real para tu crecimiento espiritual. 🔥 ⭕️ Invitados especiales desde la Asociación de Hijos de Pastores de El Salvador. 🥳🤩 💥 Este campamento no es solo juegos… es el lugar perfecto para crear amistades duraderas, fortalecer tu fe y vivir momentos que transformarán tu vida.",
@@ -39,7 +39,7 @@ const eventosProximos: Evento[] = [
     fecha: "31 de octubre al 2 de noviembre 2025",
     lugar: "Región Huamanga",
     categoria: "Campamento",
-    img: "/public/img/campaniño2025.webp",
+    img: "/img/campaniño2025.webp",
     presencial: true,
     descripcion: "🚀 ¡Presentamos el NUEVO FORMATO! 🚀 ⭐️ Campamento UNO EN CRISTO KIDS 2025 ⭐️\nDel 31 de octubre al 2 de noviembre, vive una experiencia única diseñada para transformar la vida de los más pequeños y fortalecer su fe en Cristo.\nDirigido a: Niños de 8 a 13 años.\n🔸 Detalles Clave:\n💰 Costo del evento: 60 soles\n🔒 Cupos limitados: 100\n📞 Inscripciones: 918 862 125 - 901473345\n🔥 ¡Lo mejor está por venir cuando estamos unidos en Cristo! Este campamento es una oportunidad para que los niños descubran el propósito que Dios tiene para sus vidas, se diviertan y vivan una experiencia transformadora. ¡No están solos! Cristo tiene un plan increíble para ellos. 🔥\nOrganiza: Ministerio Regional de Niños y Adolescentes, Región Huamanga.\n¡Únete a nosotros y sé parte de esta aventura de fe! ✨",
     artista: "Ministerio Regional de Niños y Adolescentes",
@@ -53,7 +53,7 @@ const eventosProximos: Evento[] = [
     fecha: "17 al 19 de octubre 2025",
     lugar: "Colegio Apostol Pablo - Región Huamanga",
     categoria: "Celebración",
-    img: "/public/img/ladp.jpg",
+    img: "/img/ladp.jpg",
     presencial: true,
     descripcion: "🥳 LADP - Región Huamanga se prepara para la fiesta de los 106 Aniversario de LADP 🥳\n\n🗓️ Del 17 al 19 de octubre, sé parte de una celebración en la Región Huamanga. Tres días de alabanza, adoración y unidad en el Colegio Apostol Pablo.",
     artista: "LADP - Región Huamanga",
@@ -70,7 +70,7 @@ const eventosRealizados: Evento[] = [
     fecha: "28 al 30 de Julio 2023",
     lugar: "Ayacucho",
     categoria: "Campamentos",
-    img: "/public/img/legacy.jpg",
+    img: "/img/legacy.jpg",
     descripcion: "Campamento Legado 2023 en Ayacucho. Un tiempo de formación espiritual, aventuras al aire libre y experiencias transformadoras para jóvenes.",
   },
   {
@@ -79,7 +79,7 @@ const eventosRealizados: Evento[] = [
     fecha: "28 al 29 de Julio 2024",
     lugar: "Fundo San Cristóbal - Ayacucho",
     categoria: "Misiones",
-    img: "/public/img/mision70.jpg",
+    img: "/img/mision70.jpg",
     descripcion: "Campamento Misionero basado en Lucas 10:2. Para adolescentes de 13 años en adelante. Tiempo de misiones: 30-31 de julio. Lugar de encuentro: Colegio Apóstol Pablo.",
 
   },
@@ -89,7 +89,7 @@ const eventosRealizados: Evento[] = [
     fecha: "18 al 20 de Noviembre",
     lugar: "Iglesia Maranatha",
     categoria: "Empoderamiento y Evangelismo",
-    img: "/public/img/negroinquebrantables.jpg",
+    img: "/img/negroinquebrantables.jpg",
     descripcion: "Evento de empoderamiento y evangelismo con plenarias a cargo de la Pra. Susana Izarnotegui, Directora Nacional del Ministerio Nacional de Niños y Adolescentes. Incluye alabanzas.",
   },
   {
@@ -98,7 +98,7 @@ const eventosRealizados: Evento[] = [
     fecha: "Diciembre",
     lugar: "cine tetro municipal",
     categoria: "Concurso",
-    img: "/public/img/talentoskids.jpg",
+    img: "/img/talentoskids.jpg",
     descripcion: "Concurso de talentos para niños con categorías de ejecución de instrumentos, canto y coreografía. Un espacio para que los más pequeños desarrollen y muestren sus dones artísticos.",
 
   }
