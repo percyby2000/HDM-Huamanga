@@ -1,4 +1,4 @@
-# HDM Huamanga
+# HDM Región Huamanga
 
 ![Logo HDM](public/img/Logo-asambleas.png)
 
@@ -41,8 +41,8 @@ hdm-react/
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/percyby2000/HDM-Huamanga.git
-   cd HDM-Huamanga
+   git clone https://github.com/percyby2000/HDM-REGION-HUAMANGA.git
+   cd HDM-REGION-HUAMANGA
    ```
 
 2. Instala las dependencias:
@@ -78,7 +78,7 @@ Las contribuciones son bienvenidas. Si deseas colaborar:
 5. Haz push a la rama (`git push origin feature/nueva-funcionalidad`)
 6. Abre un Pull Request
 
-## 📄 Licencia
+## 📄 Licencia- percy conde
 
 Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
 
