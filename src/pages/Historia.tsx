@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Historia = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [_, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // Marcamos que la página está cargada para animar elementos iniciales

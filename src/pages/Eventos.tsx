@@ -158,24 +158,25 @@ const EventoGridCard = ({ evento, onClick }: { evento: Evento, onClick: (evento:
   </div>
 );
 
-const EventoRealizadoCard = ({ evento, onClick }: { evento: Evento, onClick: (evento: Evento) => void }) => (
-  <div className="bg-gray-100 rounded-lg shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow cursor-pointer h-full" onClick={() => onClick(evento)}>
-    <img 
-      src={evento.img} 
-      alt={evento.titulo} 
-      className="h-28 sm:h-32 w-full object-cover group-hover:opacity-90 transition-opacity" 
-    />
-    <div className="p-2 sm:p-3 flex-1 flex flex-col justify-between">
-      <h4 className="text-sm sm:text-base font-bold mb-1 text-gray-800 line-clamp-2">{evento.titulo}</h4>
-      <div className="text-xs text-gray-600 mb-1 line-clamp-1">{evento.lugar}</div>
-      <span className="text-xs text-gray-500 mb-1">{evento.fecha}</span>
-      <div className="flex justify-between items-center mt-1">
-        <span className="inline-block px-2 py-1 text-xs rounded bg-blue-100 text-blue-700 w-fit truncate max-w-[60%]">{evento.categoria}</span>
-        <span className="text-xs text-blue-500 font-medium">Ver resumen</span>
-      </div>
-    </div>
-  </div>
-);
+// Componente no utilizado pero lo mantenemos por si se necesita en el futuro
+// const EventoRealizadoCard = ({ evento, onClick }: { evento: Evento, onClick: (evento: Evento) => void }) => (
+//   <div className="bg-gray-100 rounded-lg shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow cursor-pointer h-full" onClick={() => onClick(evento)}>
+//     <img 
+//       src={evento.img} 
+//       alt={evento.titulo} 
+//       className="h-28 sm:h-32 w-full object-cover group-hover:opacity-90 transition-opacity" 
+//     />
+//     <div className="p-2 sm:p-3 flex-1 flex flex-col justify-between">
+//       <h4 className="text-sm sm:text-base font-bold mb-1 text-gray-800 line-clamp-2">{evento.titulo}</h4>
+//       <div className="text-xs text-gray-600 mb-1 line-clamp-1">{evento.lugar}</div>
+//       <span className="text-xs text-gray-500 mb-1">{evento.fecha}</span>
+//       <div className="flex justify-between items-center mt-1">
+//         <span className="inline-block px-2 py-1 text-xs rounded bg-blue-100 text-blue-700 w-fit truncate max-w-[60%]">{evento.categoria}</span>
+//         <span className="text-xs text-blue-500 font-medium">Ver resumen</span>
+//       </div>
+//     </div>
+//   </div>
+// );
 
 // Componente del Modal para mostrar detalles del evento
 const EventoModal = ({ evento, onClose }: { evento: Evento, onClose: () => void }) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 const Oracion = () => {
   return (
     <div className="pt-16"> {/* Padding top para compensar el header fijo */}

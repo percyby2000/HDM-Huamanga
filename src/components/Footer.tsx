@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const Footer = () => {
   return (
     <footer id="hswfooter" className="bg-black text-white py-8">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Galeria = () => {
@@ -38,12 +38,12 @@ const Galeria = () => {
   ];
 
   // Estado para la imagen seleccionada y modal
-  const [selectedImage, setSelectedImage] = useState<null | { id: number; src: string; alt: string; descripcion: string }>(null);
+  const [selectedImage, setSelectedImage] = useState<{ id: number; src: string; alt: string; descripcion: string } | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Función para abrir el modal con la imagen seleccionada
-  const openModal = (image: React.SetStateAction<null>, index: React.SetStateAction<number>) => {
+  const openModal = (image: { id: number; src: string; alt: string; descripcion: string }, index: number) => {
     setSelectedImage(image);
     setCurrentIndex(index);
     setIsModalOpen(true);
