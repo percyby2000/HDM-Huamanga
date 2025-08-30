@@ -1,5 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
 
+// Definir el tipo para window.formsapp
+declare global {
+  interface Window {
+    formsapp?: any;
+  }
+}
+
 const Historia = () => {
   const [_, setIsLoaded] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -11,22 +18,50 @@ const Historia = () => {
     
     // Cargar el script de Forms.app
     if (!scriptLoaded.current) {
-      const script = document.createElement('script');
-      script.src = 'https://forms.app/cdn/embed.js';
-      script.async = true;
-      script.defer = true;
-      script.onload = () => {
-        // @ts-ignore
-        if (window.formsapp) new window.formsapp('680fb275d77c45bdc9a37ab6', 'popup', {
-          'overlay': 'rgba(45,45,45,0.5)',
-          'button': {'color':'#06123b','text':'¡Haga clic aquí!'},
-          'width': '800px',
-          'height': '600px',
-          'openingAnimation': {'entrance':'animate__zoomIn','exit':'animate__zoomOut'}
-        }, 'https://3lcat0n8.forms.app');
-      };
-      document.body.appendChild(script);
-      scriptLoaded.current = true;
+      try {
+        const script = document.createElement('script');
+        script.src = 'https://forms.app/cdn/embed.js';
+        script.async = true;
+        script.defer = true;
+        
+        script.onload = () => {
+          console.log('Script de forms.app cargado correctamente');
+          
+          // Inicializar el forms.app después de un pequeño retraso para asegurar que esté disponible
+          setTimeout(() => {
+            if (window.formsapp) {
+              try {
+                new window.formsapp(
+                  '680fb275d77c45bdc9a37ab6', 
+                  'popup', 
+                  {
+                    'overlay': 'rgba(45,45,45,0.5)',
+                    'button': {'color':'#06123b','text':'¡Haga clic aquí!'},
+                    'width': '800px',
+                    'height': '600px',
+                    'openingAnimation': {'entrance':'animate__zoomIn','exit':'animate__zoomOut'}
+                  }, 
+                  'https://3lcat0n8.forms.app'
+                );
+                console.log('Formulario inicializado correctamente');
+              } catch (error) {
+                console.error('Error al inicializar forms.app:', error);
+              }
+            } else {
+              console.error('window.formsapp no está disponible');
+            }
+          }, 1000);
+        };
+        
+        script.onerror = (error) => {
+          console.error('Error al cargar el script de forms.app:', error);
+        };
+        
+        document.body.appendChild(script);
+        scriptLoaded.current = true;
+      } catch (error) {
+        console.error('Error al configurar el script de forms.app:', error);
+      }
     }
     
     // Función para calcular el progreso de desplazamiento
@@ -344,11 +379,40 @@ const Historia = () => {
               Si eres hijo de un ministro o conoces a alguien que lo sea, te invitamos a formar parte de nuestra familia HDM y vivir esta experiencia transformadora juntos.
             </p>
             <div className="flex justify-center">
-              <button formsappId="680fb275d77c45bdc9a37ab6" className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-blue-900 transition-all shadow-lg transform hover:scale-105 inline-flex items-center">
+              <button 
+                id="formsapp-button"
+                formsappid="680fb275d77c45bdc9a37ab6"
+                className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-blue-900 transition-all shadow-lg transform hover:scale-105 inline-flex items-center"
+                onClick={() => {
+                  // Como alternativa, intentamos activar el formulario manualmente al hacer clic
+                  if (window.formsapp) {
+                    try {
+                      new window.formsapp(
+                        '680fb275d77c45bdc9a37ab6', 
+                        'popup', 
+                        {
+                          'overlay': 'rgba(45,45,45,0.5)',
+                          'button': {'color':'#06123b','text':'¡Haga clic aquí!'},
+                          'width': '800px',
+                          'height': '600px',
+                          'openingAnimation': {'entrance':'animate__zoomIn','exit':'animate__zoomOut'}
+                        }, 
+                        'https://3lcat0n8.forms.app'
+                      );
+                    } catch (error) {
+                      console.error('Error al activar forms.app:', error);
+                      // Si falla, redirigimos directamente al formulario
+                      window.open('https://3lcat0n8.forms.app', '_blank');
+                    }
+                  } else {
+                    // Si no está disponible forms.app, redirigimos directamente
+                    window.open('https://3lcat0n8.forms.app', '_blank');
+                  }
+                }}
+              >
                 ¡Haga clic aquí!
               </button>
             </div>
-            {/* Script para el formulario */}
           </div>
         </div>
       </section>
