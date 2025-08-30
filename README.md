@@ -1,69 +1,92 @@
-# React + TypeScript + Vite
+# HDM Región Huamanga
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Logo HDM](public/img/Logo-asambleas.png)
 
-Currently, two official plugins are available:
+## 📋 Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Sitio web oficial de Hijos De Ministros (HDM) de la Región Huamanga, desarrollado con React, TypeScript y Vite. Este proyecto tiene como objetivo apoyar a las familias de Las Asambleas de Dios del Perú región Huamanga, centrándose en los niños y adolescentes.
 
-## Expanding the ESLint configuration
+## ✨ Características principales
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Diseño responsivo** adaptado para todo tipo de dispositivos
+- **Secciones interactivas** para eventos, historia, galería y más
+- **Integración con redes sociales** mediante componentes embebidos
+- **Animaciones fluidas** para una experiencia de usuario mejorada
+- **Formularios de contacto** para inscripciones a eventos
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Tecnologías utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 18+** - Biblioteca para crear interfaces de usuario
+- **TypeScript** - Tipado estático para JavaScript
+- **Vite** - Entorno de desarrollo ultrarrápido
+- **Tailwind CSS** - Framework CSS utilitario
+- **Framer Motion** - Biblioteca de animaciones para React
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📦 Estructura del proyecto
+
+```
+hdm-react/
+├── public/            # Recursos estáticos (imágenes, videos, etc.)
+├── src/
+│   ├── components/    # Componentes reutilizables
+│   ├── pages/         # Páginas principales
+│   ├── assets/        # Recursos del proyecto
+│   ├── App.tsx        # Componente principal
+│   └── main.tsx       # Punto de entrada
+├── package.json       # Dependencias y scripts
+└── tsconfig.json      # Configuración de TypeScript
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Instalación
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/percyby2000/HDM-REGION-HUAMANGA.git
+   cd HDM-REGION-HUAMANGA
+   ```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+4. Abre [http://localhost:5173](http://localhost:5173) para ver la aplicación en tu navegador.
+
+## 🔄 Despliegue
+
+Para construir la aplicación para producción:
+
+```bash
+npm run build
+```
+
+Los archivos generados estarán en la carpeta `dist/` listos para ser desplegados.
+
+## 👥 Contribución
+
+Las contribuciones son bienvenidas. Si deseas colaborar:
+
+1. Haz fork del proyecto
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`)
+3. Realiza tus cambios
+4. Haz commit de tus cambios (`git commit -m 'Añade nueva funcionalidad'`)
+5. Haz push a la rama (`git push origin feature/nueva-funcionalidad`)
+6. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
+
+## 📞 Contacto
+
+Para más información sobre HDM Región Huamanga o este proyecto, puedes contactarnos a través de:
+
+- 📧 Email: [hdm@asambleas.pe](mailto:hdm@asambleas.pe)
+- 🌐 Web: [www.asambleasdedios.pe](https://www.asambleasdedios.pe)
+- 📱 Facebook: [HDM Región Huamanga](https://www.facebook.com/hdmhuamanga)
 ```
