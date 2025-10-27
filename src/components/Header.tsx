@@ -27,7 +27,7 @@ const Header = () => {
             <Link to="/oracion" className="text-white hover:text-[#f0b261] transition-colors font-anton text-base tracking-wider uppercase">ORACION</Link>
            <Link to="/historia" className="text-white hover:text-[#f0b261] transition-colors font-anton text-base tracking-wider uppercase">HISTORIA</Link>
             <Link to="https://hdm-store.vercel.app/" className="text-white hover:text-[#f0b261] transition-colors font-anton text-base tracking-wider uppercase">TIENDA</Link>
-            <Link to="/galeria" className="text-white hover:text-[#f0b261] transition-colors font-anton text-base tracking-wider uppercase">FOTOS 2024</Link>
+            <Link to="/galeria" className="text-white hover:text-[#f0b261] transition-colors font-anton text-base tracking-wider uppercase">FOTOS</Link>
           </div>
           
           {/* Purple circle with icon */}
@@ -88,7 +88,7 @@ const Header = () => {
             <Link to="/oracion" className="text-white hover:text-[#f0b261] transition-colors font-anton text-xl tracking-wider w-full text-center" onClick={() => setIsMenuOpen(false)}>ORACION</Link>
             <Link to="/historia" className="text-white hover:text-[#f0b261] transition-colors font-anton text-xl tracking-wider w-full text-center" onClick={() => setIsMenuOpen(false)}>HISTORIA</Link>
             <Link to="https://hdm-store.vercel.app/" className="text-white hover:text-[#f0b261] transition-colors font-anton text-xl tracking-wider w-full text-center" onClick={() => setIsMenuOpen(false)}>TIENDA</Link>
-            <Link to="/galeria" className="text-white hover:text-[#f0b261] transition-colors font-anton text-xl tracking-wider w-full text-center" onClick={() => setIsMenuOpen(false)}>FOTOS 2024</Link> 
+            <Link to="/galeria" className="text-white hover:text-[#f0b261] transition-colors font-anton text-xl tracking-wider w-full text-center" onClick={() => setIsMenuOpen(false)}>FOTOS</Link> 
             
             <div className="mt-4">
 

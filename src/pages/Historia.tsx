@@ -381,7 +381,7 @@ const Historia = () => {
             <div className="flex justify-center">
               <button 
                 id="formsapp-button"
-                formsappid="680fb275d77c45bdc9a37ab6"
+                data-formsappid="680fb275d77c45bdc9a37ab6"
                 className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-bold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-blue-900 transition-all shadow-lg transform hover:scale-105 inline-flex items-center"
                 onClick={() => {
                   // Como alternativa, intentamos activar el formulario manualmente al hacer clic

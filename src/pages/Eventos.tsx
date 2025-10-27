@@ -47,20 +47,7 @@ const eventosProximos: Evento[] = [
     horario: "31 de octubre al 2 de noviembre, 2025",
     mapa: "https://maps.app.goo.gl/R4VdnP9gqnmSSxVi7",
   },
-  {
-    id: 4,
-    titulo: "106 ANIVERSARIO DE LADP",
-    fecha: "17 al 19 de octubre 2025",
-    lugar: "Colegio Apostol Pablo - Región Huamanga",
-    categoria: "Celebración",
-    img: "/img/ladp.jpg",
-    presencial: true,
-    descripcion: "🥳 LADP - Región Huamanga se prepara para la fiesta de los 106 Aniversario de LADP 🥳\n\n🗓️ Del 17 al 19 de octubre, sé parte de una celebración en la Región Huamanga. Tres días de alabanza, adoración y unidad en el Colegio Apostol Pablo.",
-    artista: "LADP - Región Huamanga",
-    precio: "Entrada libre",
-    horario: "Del 17 al 19 de octubre",
-    mapa: "https://maps.google.com/?q=Huamanga+Ayacucho+Peru",
-  },
+
 ];
 
 const eventosRealizados: Evento[] = [
@@ -104,7 +91,7 @@ const eventosRealizados: Evento[] = [
   }
 ];
 
-const HeroBanner = ({ evento, onClick }: { evento: Evento, onClick: (evento: Evento) => void }) => (
+const HeroBanner = ({ evento }: { evento: Evento }) => (
   <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-screen max-h-[700px] flex items-end justify-center bg-black mb-4 sm:mb-8 overflow-hidden">
     <video 
       src={evento.img} 
@@ -117,12 +104,14 @@ const HeroBanner = ({ evento, onClick }: { evento: Evento, onClick: (evento: Eve
     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70"></div>
     <div className="relative z-10 pb-10 sm:pb-16 mb-3 sm:mb-6 text-center px-4">
       <h1 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-4 drop-shadow-lg">{evento.titulo}</h1>
-      <button
-        onClick={() => onClick(evento)}
-        className="inline-block bg-white text-black px-6 sm:px-12 py-3 sm:py-4 rounded-full font-bold border-2 border-white hover:bg-black hover:text-white hover:border-red-500 transition-colors shadow-lg text-sm sm:text-lg"
+      <a
+        href="https://camp-la-resistencia.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-white text-black px-6 sm:px-12 py-3 sm:py-4 rounded-full font-bold border-2 border-white hover:bg-black hover:text-white hover:border-red-500 transition-colors shadow-lg text-sm sm:text-lg text-center"
       >
         VER EVENTO
-      </button>
+      </a>
     </div>
   </div>
 );
@@ -366,7 +355,7 @@ const Eventos: React.FC = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Banner principal */}
       <div className="pt-16">
-        <HeroBanner evento={eventosProximos[0]} onClick={abrirModal} />
+        <HeroBanner evento={eventosProximos[0]} />
       </div>
 
       <div className="max-w-7xl mx-auto px-3 sm:px-4">
